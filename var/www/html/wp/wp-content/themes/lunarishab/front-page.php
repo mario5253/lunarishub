@@ -41,7 +41,7 @@
           スパイシーでヘルシーな本場の味をお楽しみ下さい。
         </p>
         <div class="section_btn">
-          <a href="<?php echo get_the_permalink(24);?>" class="btn btn-more">もっと見る</a>
+          <a href="<?php echo get_the_permalink(24);?>" id="conceptID" class="btn btn-more">もっと見る</a>
         </div>
       </div>
     </div>

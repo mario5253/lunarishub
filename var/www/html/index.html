@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunarishub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0d0d1a, #1a1a33);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0d0d1a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.stars {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 60s linear infinite;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+@keyframes moveStars {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-500px, -500px); }
+}
+    header {
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #9ad0ff, #d6b3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #4a7aff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      background: #6b8cff;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.moon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, #ccc 40%, #999 100%);
+  box-shadow: 0 0 12px rgba(255,255,255,0.4);
+}
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(90deg, #4a7aff, #8f5aff);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.25s;
+  box-shadow: 0 0 12px rgba(100,140,255,0.4);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(140,160,255,0.8);
+}
+  </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56CJN8TR');</script>
+<!-- End Google Tag Manager -->
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T4TX0WG1E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0T4TX0WG1E');
+</script>
+<body>
+
+
+  <header><div class="logo">
+  <div class="moon"></div>
+  <span>Lunarishub</span>
+</div></header>
+
+  <section class="hero">
+    <h1>Welcome to Lunarishub</h1>
+    <p>月のように静かで、星のように広がるデジタルスペースへ。</p>
+    <a href="/wp/" class="btn">Enter</a>
+    <a href="/wp/" class="btn doctor-link" data-doctor="123">A医師</a>
+    <a href="/wp/" class="btn doctor-link" data-doctor="124">B医師</a>
+    <a href="/wp/" class="btn doctor-link" data-doctor="125">C医師</a>
+
+
+  </section>
+<div class="stars"></div>
+  <footer>
+    © 2026 Lunarishub
+  </footer>
+<script>
+document.querySelectorAll('.doctor-link').forEach(link => {
+  link.addEventListener('click', () => {
+    dataLayer.push({
+      event: 'doctor_click',
+      doctor_id: link.dataset.doctor
+    });
+  });
+});
+</script>
+
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56CJN8TR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>
